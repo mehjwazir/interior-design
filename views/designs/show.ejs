@@ -1,5 +1,43 @@
 <%- include('../partials/header') %>
 
-<h1>Design Page</h1>
+<br><br>
+<h1>Title: <%= design.title %></h1>
+<h1>Genre: <%= design.style %></h1>
 
-<%- include('../partials/footer') %>
+<br>
+
+
+<section class="imageSection">
+	<% if (design.image.length) { %>
+	<% design.image.forEach(function(s) { %>
+	<div id="IMGDiv">
+		<img id="image-user" src="<%= s.userAvatar %>"><%= s.userName %>
+		<%= s.createdAt.toLocaleDateString() %>
+		<div class="imgCapDiv"> <img class="screenshot" src="<%= s.photoUrl %>">
+			<div class="caption"><%= s.caption %></div>
+		</div>
+		<div class="editDelBtnDiv">
+			<% if (user && user._id.equals(s.user)) { %>
+
+			<% if (s.user.equals(user._id)) { %>
+			<button type="submit" onclick="window.location.href='/images/<%= s._id %>/edit';">Edit</button>
+			<% } %>
+
+			<form action="/images/<%= s._id %>?_method=DELETE" method="POST">
+				<button type="submit">Delete</button>
+			</form>
+			<br>
+			<% } %>
+		</div>
+	</div>
+	<% }); %>
+	<% } else { %>
+	<h3>No Posts Yet! <br> Be the first to add one!</h3>
+	<% } %>
+</section>
+<% if (user) { %>
+<details>
+	<summary>Share your Design Inspo Here!</summary>
+	<p>Link your image here with caption. <br>
+
+		<%- include('../partials/footer') %>

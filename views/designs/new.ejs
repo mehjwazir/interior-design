@@ -1,0 +1,23 @@
+<%- include('../partials/header') %>
+
+<section id="addDesignForm">
+	<form action="/designs" method="POST">
+		<label>Title:</label>
+		<input type="text" name="title">
+		<label>Style:</label>
+		<select name="style" id="inputStyle">
+			<option value="Modern">Modern</option>
+			<option value="Japandi">Japandi</option>
+			<option value="California">California</option>
+			<option value="Minimal">Minimal</option>
+			<option value="Bohemian">Bohemian</option>
+			<option value="Industrial">Industrial</option>
+			<option value="Mid-Century">Mid-Century</option>
+		</select>
+		<div>
+			<input class="submitBtn" type="submit" value="Add Design">
+		</div>
+	</form>
+</section>
+
+<%- include('../partials/footer') %>

@@ -1,5 +1,25 @@
 <%- include('../partials/header') %>
 
+<h1>All Games</h1>
 
+<table id="designList">
+
+	<thead>
+		<tr>
+			<th>Title</th>
+			<th>Style</th>
+			<th>view</th>
+		</tr>
+	</thead>
+	<tbody>
+		<% designs.forEach(function(g) { %>
+		<tr>
+			<td><%= d.title %></td>
+			<td><%= d.style %></td>
+			<td><a href="/designs/<%= d._id %>">view</a></td>
+		</tr>
+		<% }); %>
+	</tbody>
+</table>
 
 <%- include('../partials/footer') %>
