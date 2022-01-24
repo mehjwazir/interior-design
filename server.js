@@ -16,6 +16,7 @@ require('./config/passport');
 
 var indexRouter = require('./routes/index');
 var designsRouter = require('./routes/designs');
+var commentsRouter = require('./routes/comments')
 
 var app = express();
 
@@ -31,7 +32,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(methodOverride('_method'));
 
 app.use(session({
-  secret: process.env.SECRET,
+  secret: DESIGNmwn,
   resave: false,
   saveUninitialized: true
 }));
@@ -47,7 +48,8 @@ app.use(function(req, res, next) {
 const isLoggedIn = require('./config/auth');
 
 app.use('/', indexRouter);
-app.use('/users', designsRouter);
+app.use('/designs', designsRouter);
+app.use('/', commentsRouter)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

@@ -1,4 +1,4 @@
-const Burger = require('../models/design');
+const Designs = require('../models/design');
 
 module.exports = {
     index,
@@ -9,7 +9,7 @@ module.exports = {
 
 function index(req, res) {
     design.find({})
-  .then(function(burgers) {
+  .then(function(designs) {
     res.render('designs/index', { title: 'All designs', designs });
   })
   .catch(function(err){
