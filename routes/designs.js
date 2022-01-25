@@ -6,7 +6,7 @@ var designsCtrl = require('../controllers/designs');
 
 router.get('/', designsCtrl.index);
 router.get('/new', designsCtrl.new);
-router.get('/:id', designsCtrl.new);
+router.get('/:id', designsCtrl.show);
 router.post('/', designsCtrl.create);
 
 

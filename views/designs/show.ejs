@@ -8,20 +8,15 @@
 
 
 <section class="imageSection">
-	<% if (design.image.length) { %>
-	<% design.image.forEach(function(s) { %>
+	<% if (design.images.length) { %>
+	<% design.images.forEach(function(s) { %>
 	<div id="IMGDiv">
-		<img id="image-user" src="<%= s.userAvatar %>"><%= s.userName %>
-		<%= s.createdAt.toLocaleDateString() %>
-		<div class="imgCapDiv"> <img class="image" src="<%= s.photoUrl %>">
+
+		<div class="imgCapDiv"> <img class="image" alt="" src="<%= s.photoUrl %>">
 			<div class="caption"><%= s.caption %></div>
 		</div>
 		<div class="editDelBtnDiv">
-			<% if (user && user._id.equals(s.user)) { %>
-
-			<% if (s.user.equals(user._id)) { %>
-			<button type="submit" onclick="window.location.href='/images/<%= s._id %>/edit';">Edit</button>
-			<% } %>
+			<% if (user && user._id.equals(design.user)) { %>
 
 			<form action="/images/<%= s._id %>?_method=DELETE" method="POST">
 				<button type="submit">Delete</button>
@@ -32,10 +27,9 @@
 	</div>
 	<% }); %>
 	<% } else { %>
-	<h3>No Posts Yet! <br> Be the first to add one!</h3>
+	<h3>No Images Yet! <br> Add one!</h3>
 	<% } %>
 </section>
-<% if (user) { %>
 
 
 

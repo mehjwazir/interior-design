@@ -26,6 +26,7 @@ function newDesign(req, res) {
 function create(req, res) {
   const design = new Design(req.body);
   design.user = req.user._id;  
+  if (req.body.link) design.images.push({ photoUrl: req.body.link })
   design.save(function (err) {
     if (err) return res.redirect('/designs/new');
     res.redirect(`/designs/${design._id}`);
