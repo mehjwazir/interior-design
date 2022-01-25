@@ -1,4 +1,4 @@
-const Game = require('../models/design');
+const Design = require('../models/design');
 
 module.exports = {
   create,

@@ -1,4 +1,4 @@
-const Designs = require('../models/design');
+const Design = require('../models/design');
 
 module.exports = {
   index,
@@ -9,7 +9,7 @@ module.exports = {
 
 function index(req, res) {
   Design.find({}, function (err, designs) {
-    res.render('designs/index', { title: 'All Designs', design });
+    res.render('designs/index', { title: 'All Designs', designs });
   });
 }
 
@@ -24,10 +24,8 @@ function newDesign(req, res) {
 }
 
 function create(req, res) {
-  for (let key in req.body) {
-    if (req.body[key] === '') delete req.body[key];
-  }
   const design = new Design(req.body);
+  design.user = req.user._id;  
   design.save(function (err) {
     if (err) return res.redirect('/designs/new');
     res.redirect(`/designs/${design._id}`);

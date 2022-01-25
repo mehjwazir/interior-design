@@ -3,17 +3,16 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const imageSchema = new Schema({
-	user: { type: Schema.Types.ObjectId, ref: 'User' },
 	photoUrl: String,
 	caption: String,
-	userName: String,
-	userAvatar: String
-
 }, {
 	timestamps: true
 });
 
 const designSchema = new Schema({
+	user: { type: Schema.Types.ObjectId, ref: 'User' },
+	userName: String,
+	userAvatar: String,
 	title: {
 		type: String,
 		required: true

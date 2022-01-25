@@ -2,7 +2,7 @@
 
 <br><br>
 <h1>Title: <%= design.title %></h1>
-<h1>Genre: <%= design.style %></h1>
+<h1>Style: <%= design.style %></h1>
 
 <br>
 
@@ -13,7 +13,7 @@
 	<div id="IMGDiv">
 		<img id="image-user" src="<%= s.userAvatar %>"><%= s.userName %>
 		<%= s.createdAt.toLocaleDateString() %>
-		<div class="imgCapDiv"> <img class="screenshot" src="<%= s.photoUrl %>">
+		<div class="imgCapDiv"> <img class="image" src="<%= s.photoUrl %>">
 			<div class="caption"><%= s.caption %></div>
 		</div>
 		<div class="editDelBtnDiv">
@@ -36,8 +36,10 @@
 	<% } %>
 </section>
 <% if (user) { %>
-<details>
-	<summary>Share your Design Inspo Here!</summary>
-	<p>Link your image here with caption. <br>
 
-		<%- include('../partials/footer') %>
+
+
+
+
+
+<%- include('../partials/footer') %>
