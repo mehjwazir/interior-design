@@ -9,16 +9,16 @@
 
 <section class="imageSection">
 	<% if (design.images.length) { %>
-	<% design.images.forEach(function(s) { %>
+	<% design.images.forEach(function(i) { %>
 	<div id="IMGDiv">
 
-		<div class="imgCapDiv"> <img class="image" alt="" src="<%= s.photoUrl %>">
-			<div class="caption"><%= s.caption %></div>
+		<div class="imgCapDiv"> <img class="image" alt="" width="500" height="600" src="<%= i.photoUrl %>">
+			<div class="caption"><%= i.caption %></div>
 		</div>
 		<div class="editDelBtnDiv">
 			<% if (user && user._id.equals(design.user)) { %>
 
-			<form action="/images/<%= s._id %>?_method=DELETE" method="POST">
+			<form action="/images/<%= i._id %>?_method=DELETE" method="POST">
 				<button type="submit">Delete</button>
 			</form>
 			<br>
@@ -30,6 +30,7 @@
 	<h3>No Images Yet! <br> Add one!</h3>
 	<% } %>
 </section>
+
 
 
 
