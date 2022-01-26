@@ -12,7 +12,7 @@ body {
 } */
 
 
-body>nav {
+nav {
   grid-area: nav;
   background-color: #E8DED1;
   display: flex;
@@ -39,4 +39,25 @@ a {
 #header {
   display: block;
 
+}
+
+.imageindex {
+  height: 400px;
+  width: 400px;
+  float: left;
+  margin: 58px;
+  /* display: flex;
+  flex-direction: row;
+  align-items: center; */
+}
+
+.imgindex {
+  height: 400px;
+  width: 400px;
+  float: left;
+  margin-top: 20px;
+  margin: 0 58px 20px 58px;
+  /* display: flex;
+  flex-direction: row;
+  align-items: center; */
 }
