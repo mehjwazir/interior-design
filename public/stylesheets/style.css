@@ -1,9 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300&display=swap');
+
+
 body {
-  padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   background-color: white;
 }
 
+/* nav {
+  background-color: beige;
+  margin-top 0;
+} */
+
+
+body>nav {
+  grid-area: nav;
+  background-color: #E8DED1;
+  display: flex;
+  align-items: center;
+  padding: 0 20px 0 30px;
+}
+
+.icon {
+  height: 100px;
+  width: 100px;
+}
+
 a {
   color: black;
+}
+
+.header {
+  margin-left: 280px;
+  font-family: 'Kalam', cursive;
+  font-size: 25px;
+}
+
+#header {
+  display: block;
+
 }
