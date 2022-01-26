@@ -5,7 +5,11 @@ module.exports = {
   delete: deleteImage,
   edit,
   update,
+
 };
+
+
+
 
 function create(req, res) {
   Design.findById(req.params.id, function(err, design) {
