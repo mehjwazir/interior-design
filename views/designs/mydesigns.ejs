@@ -1,15 +1,18 @@
 <%- include('../partials/header') %>
 
-<h1>All Designs</h1>
+<h1>My Designs</h1>
 
 <div class="designlist">
 
 
 	<% designs.forEach(function(d) { %>
+	<% console.log(user._id) %>
+	<% console.log(d.user._id) %>
+	<% if (user && user._id.equals(d.user)) { %>
 	<a href="/designs/<%= d._id %>">
 		<img src="<%=d.images %>" alt="" height="400px" width="400px" class="alldesigns">
 	</a>
-
+	<% } %>
 	<% }); %>
 
 </div>

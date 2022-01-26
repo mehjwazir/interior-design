@@ -2,9 +2,9 @@ const mongoose = require('mongoose');
 // shortcut variable
 const Schema = mongoose.Schema;
 
-const imageSchema = new Schema({
-	photoUrl: String,
-	caption: String,
+const commentSchema = new Schema({
+	content: String,
+	user: { type: Schema.Types.ObjectId, ref: 'User' },
 }, {
 	timestamps: true
 });
@@ -21,7 +21,10 @@ const designSchema = new Schema({
 		type: String,
 		enum: ['Modern', 'Japandi', 'California', 'Minimal', 'Bohemian', 'Mid-Century', 'Other']
 	},
-	images: [imageSchema]
+	images: {
+	type: String,
+},
+	comments: [commentSchema]
 }, {
 	timestamps: true
 });

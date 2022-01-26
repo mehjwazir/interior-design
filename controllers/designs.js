@@ -4,9 +4,25 @@ module.exports = {
   index,
   show,
   new: newDesign,
-  create
+  create,
+  mydesigns,
+  delete: deleteDesign
 };
 
+
+function deleteDesign(req, res) {
+  Design.findByIdAndDelete(req.params.id, function (design) {
+    res.redirect('/designs/mydesigns')
+  })
+
+}
+
+
+function mydesigns(req, res) {
+  Design.find({}, function (err, designs) {
+    res.render('designs/mydesigns', { title: 'My Designs', designs });
+  });
+}
 function index(req, res) {
   Design.find({}, function (err, designs) {
     res.render('designs/index', { title: 'All Designs', designs });
