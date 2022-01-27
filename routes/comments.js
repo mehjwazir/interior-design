@@ -1,14 +1,12 @@
-// const express = require('express');
-// const router = express.Router();
-// const passport = require('passport');
+const express = require('express');
+const router = express.Router();
+// Require the yet to be created reviews controller
+const reviewsCtrl = require('../controllers/comments');
 
+// Define the Route to create a review
+// POST /comments/:id/reviews
+router.post('/designs/:id/comments', commentsCtrl.create);
+// DELETE /comments/:id
+router.delete('/comments/:id', commentsCtrl.delete);
 
-// const imagesCtrl = require('../controllers/comments'); 
-
-// router.get('/images/:id/edit', imagesCtrl.edit);
-// router.post('/designs/:id/images', imagesCtrl.create);
-// router.put('/images/:id', imagesCtrl.update);
-// router.delete('/images/:id', imagesCtrl.delete);
-
-
-// module.exports = router;
+module.exports = router;

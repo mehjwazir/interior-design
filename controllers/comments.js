@@ -1,59 +1,34 @@
-// const Design = require('../models/design');
+const Movie = require('../models/design');
 
-// module.exports = {
-//   create,
-//   delete: deleteImage,
-//   edit,
-//   update,
+module.exports = {
+  create,
+  delete: deleteComment
 
-// };
+};
 
+function deleteComment(req, res) {
+  Design.findOne({ 'comments.id': req.params.id, 'comments.user': req.user._id })
+    .then(function (design) {
+      if (!design) return res.redirect('/designs');
+      design.comments.remove(req.params.id);
+      return design.save();
+    })
+    .then(function (design) {
+      res.redirect(`/designs/${design._id}`);
+    });
+}
 
-
-
-// function create(req, res) {
-//   Design.findById(req.params.id, function(err, design) {
-//     req.body.user = req.user._id;
-//     req.body.userName = req.user.name;
-//     req.body.userAvatar = req.user.avatar;
-
-    
-//     design.images.push(req.body);
-//     design.save(function(err) {
-//       res.redirect(`/designs/${design._id}`);
-//     });
-//   });
-// }
-
-// async function deleteImage(req, res) {
-//   const game = await Design.findOne({'images._id': req.params.id});
- 
-//   const image = design.image.id(req.params.id);
-//   if (!image.user.equals(req.user._id)) return res.redirect(`/designs/${design._id}`);
-//   image.remove();
-//   // Save the updated game
-//   await image.save();
-//   res.redirect(`/designs/${image._id}`);
-// }
-
-//   function edit(req, res){
-//     Design.findOne(
-//       {'images._id': req.params.id, 'images.user': req.user._id},
-//       function(err, game){
-//         if (!design || err) return res.redirect(`/designs/${design._id}`);
-//         let image = design.images.id(req.params.id);
-//         res.render('images/edit', {title: 'Edit', image });
-//       }
-//     )
-//   }
-
-//   function update(req, res) {
-//     Design.findOne({'images._id': req.params.id}, function(err, design) {
-//       const imageSubdoc = design.images.id(req.params.id);
-//       if (!imageSubdoc.user.equals(req.user._id)) return res.redirect(`/designs/${design._id}`);
-//       imageSubdoc.caption = req.body.caption;
-//       design.save(function(err) {
-//         res.redirect(`/designs/${design._id}`);
-//       });
-//     });
-//   }
+function create(req, res) {
+  Design.findById(req.params.id, function(err, designs) {
+    // Add the user-centric info to req.body
+    req.body.user = req.user._id;
+    req.body.userName = req.user.name;
+    req.body.userAvatar = req.user.avatar;
+    // We can push in subdoc objects into Mongoose arrays
+    design.reviews.push(req.body);
+    design.save(function(err) {
+      // Step 5: Respond with a redirect because we've mutated data
+      res.redirect(`/designs/${design._id}`);
+    });
+  });
+}

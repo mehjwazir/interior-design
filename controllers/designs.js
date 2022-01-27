@@ -10,6 +10,9 @@ module.exports = {
 };
 
 
+
+
+
 function deleteDesign(req, res) {
   Design.findByIdAndDelete(req.params.id, function (design) {
     res.redirect('/designs/mydesigns')
@@ -17,9 +20,8 @@ function deleteDesign(req, res) {
 
 }
 
-
 function mydesigns(req, res) {
-  Design.find({}, function (err, designs) {
+  Design.find({user: req.user._id}, function (err, designs) {
     res.render('designs/mydesigns', { title: 'My Designs', designs });
   });
 }

@@ -6,15 +6,15 @@
 
 
 	<% designs.forEach(function(d) { %>
-	<% console.log(user._id) %>
-	<% console.log(d.user._id) %>
-	<% if (user && user._id.equals(d.user)) { %>
+
+
 	<a href="/designs/<%= d._id %>">
 		<img src="<%=d.images %>" alt="" height="400px" width="400px" class="alldesigns">
 	</a>
-	<% } %>
+
 	<% }); %>
 
 </div>
+
 
 <%- include('../partials/footer') %>
