@@ -1,4 +1,4 @@
-const Movie = require('../models/design');
+const Design = require('../models/design');
 
 module.exports = {
   create,
@@ -19,13 +19,13 @@ function deleteComment(req, res) {
 }
 
 function create(req, res) {
-  Design.findById(req.params.id, function(err, designs) {
+  Design.findById(req.params.id, function(err, design) {
     // Add the user-centric info to req.body
     req.body.user = req.user._id;
     req.body.userName = req.user.name;
     req.body.userAvatar = req.user.avatar;
     // We can push in subdoc objects into Mongoose arrays
-    design.reviews.push(req.body);
+    design.comments.push(req.body);
     design.save(function(err) {
       // Step 5: Respond with a redirect because we've mutated data
       res.redirect(`/designs/${design._id}`);

@@ -20,26 +20,46 @@
 
 			<form action="/designs/<%= design._id %>?_method=DELETE" method="POST">
 				<button type="submit">Delete</button>
+			</form>
+			<% } %>
+			<br><br>
 
-				<br><br>
-				<h2>Comments</h2>
-				<% if (user) { %>
 
-				<form action="/designs/<%= design._id %>?_method=DELETE" method="POST">
-					<label>Comment:</label> <br>
-					<textarea name="content"></textarea> <br>
-					<button type="submit" value="Add Comment">Add Comment</button>
+			<h2>Comments</h2>
+			<form action="/designs/<%= design._id %>/comments" method="POST">
+				<label>Comment:</label> <br>
+				<textarea name="content"></textarea> <br>
+				<button type="submit" value="Add Comment">Add Comment</button>
 
-				</form>
-				<% } %>
-				<br>
-				<% } %>
+			</form>
+
+
+
+
+			<br>
+
 		</div>
 	</div>
 </section>
 
+<% design.comments.forEach(function(d) { %>
 
+<tr>
+	<td class="comment-user"><img alt="avatar" src="<%= d.userAvatar %>"><%= d.userName %></td>
+	<td><%= d.createdAt.toLocaleDateString() %></td>
+	<td><%= d.content%></td>
 
+	<td>
+		<% if (user && user._id.equals(d.user)) { %>
+		<form action="/comments/<%= d._id %>?_method=DELETE" method="POST">
+			<button type="submit">X</button>
+		</form>
+		<% } %>
+	</td>
+</tr>
+<% }); %>
+</tbody>
+</table>
 
 
 

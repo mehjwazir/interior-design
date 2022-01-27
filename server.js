@@ -16,7 +16,7 @@ require('./config/passport');
 
 var indexRouter = require('./routes/index');
 var designsRouter = require('./routes/designs');
-// var commentsRouter = require('./routes/comments');
+var commentsRouter = require('./routes/comments');
 
 var app = express();
 
@@ -49,7 +49,7 @@ app.use(function(req, res, next) {
 
 app.use('/', indexRouter);
 app.use('/designs', designsRouter);
-// app.use('/comments', commentsRouter);
+app.use('/', commentsRouter);
 
 // app.use('/', commentsRouter)
 
