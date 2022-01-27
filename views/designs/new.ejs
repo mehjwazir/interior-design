@@ -2,8 +2,9 @@
 
 <section id="addDesignForm">
 	<form action="/designs" method="POST">
-		<label>Title:</label>
-		<input type="text" name="title">
+		<label>Title:</label> 
+		<input type="text" name="title"> <br>
+		<br>
 		<label>Style:</label>
 		<select name="style" id="inputStyle">
 			<option value="Modern">Modern</option>
@@ -13,7 +14,8 @@
 			<option value="Bohemian">Bohemian</option>
 			<option value="Mid-Century">Mid-Century</option>
 			<option value="Other">Other</option>
-		</select>
+		</select><br>
+		<br>
 		<label>Imgur Image Link: </label><br>
 		<input type="text" name="images" pattern="https:\/\/.{5,}"><br>
 		<input class="submitBtn" type="submit" value="Add Design">

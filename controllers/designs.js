@@ -6,12 +6,35 @@ module.exports = {
   new: newDesign,
   create,
   mydesigns,
-  delete: deleteDesign
+  delete: deleteDesign,
+  edit,
+  update
 };
 
+function update(req, res) {
+  Design.findOneAndUpdate(
+    {_id: req.params.id, user: req.user._id},
+    // update object with updated properties
+    req.body,
+    // options object with new: true to make sure updated doc is returned
+    {new: true},
+    function(err, design) {
+      if (err || !design) return res.redirect('/designs');
+      res.redirect(`/designs/${design._id}`);
+    }
+  );
+}
 
+function edit(req, res) {
+  console.log('req.body', req.body);
+  console.log('req.params',req.params.id);
+  Design.findOne({ _id: req.params.id }, function (err, design) { 
+    if (err || !design) return res.redirect('/designs');
+    console.log(design);
+    res.render('designs/edit', { title: 'Edit Design', design });
 
-
+  })
+}
 
 function deleteDesign(req, res) {
   Design.findByIdAndDelete(req.params.id, function (design) {

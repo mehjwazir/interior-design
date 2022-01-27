@@ -16,12 +16,24 @@
 		<div class="editDelBtnDiv">
 			<% if (user && user._id.equals(design.user)) { %>
 
+			<a href="/designs/<%= design._id %>/edit ">Edit</a>
+
 			<form action="/designs/<%= design._id %>?_method=DELETE" method="POST">
 				<button type="submit">Delete</button>
 
-			</form>
-			<br>
-			<% } %>
+				<br><br>
+				<h2>Comments</h2>
+				<% if (user) { %>
+
+				<form action="/designs/<%= design._id %>?_method=DELETE" method="POST">
+					<label>Comment:</label> <br>
+					<textarea name="content"></textarea> <br>
+					<button type="submit" value="Add Comment">Add Comment</button>
+
+				</form>
+				<% } %>
+				<br>
+				<% } %>
 		</div>
 	</div>
 </section>
