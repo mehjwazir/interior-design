@@ -72,5 +72,6 @@ a {
 .alldesigns {
   height: 400px;
   width: 400px;
-  margin: 58px;
+  margin-top: 30px;
+  margin: 0 58px 30px 58px;
 }
