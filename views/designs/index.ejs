@@ -4,14 +4,11 @@
 
 <div class="imagesection">
 
-
 	<% designs.forEach(function(d) { %>
 	<a href="/designs/<%= d._id %>">
-		<img src="<%=d.images %>" alt=""  class="allimages">
+		<img src="<%=d.images %>" alt="" class="allimages">
 	</a>
-
 	<% }); %>
-
 </div>
 
 <%- include('../partials/footer') %>

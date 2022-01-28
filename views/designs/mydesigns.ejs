@@ -3,18 +3,13 @@
 <h1>My Designs</h1>
 
 <div class="designlist">
-
-
 	<% designs.forEach(function(d) { %>
 	<% console.log(d) %>
 
 	<a href="/designs/<%= d._id %>">
 		<img src="<%=d.images %>" alt="" class="allimages">
 	</a>
-
 	<% }); %>
-
 </div>
-
 
 <%- include('../partials/footer') %>

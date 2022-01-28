@@ -14,8 +14,4 @@ router.post('/', isLoggedIn, designsCtrl.create);
 router.delete('/:id', isLoggedIn,  designsCtrl.delete);
 
 
-
-
-
-
 module.exports = router;

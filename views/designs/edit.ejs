@@ -1,23 +1,25 @@
 <%- include('../partials/header') %>
 
-<section id="addDesignForm">
+<section>
 	<form action="/designs/<%= design._id %>?_method=PUT" method="POST">
-		<label class="title" >Title:</label>
-		<input type="text" name="title" value="<%= design.title %> "> <br>
-		<label>Style:</label>
-		<select name="style" id="inputStyle">
-			<option <%= design.style === "Modern" ? 'selected': '' %> value="Modern">Modern</option>
-			<option <%= design.style === "Japandi" ? 'selected': '' %>value="Japandi">Japandi</option>
-			<option <%= design.style === "California" ? 'selected': '' %>value="California">California</option>
-			<option <%= design.style === "Minimal" ? 'selected': '' %>value="Minimal">Minimal</option>
-			<option <%= design.style === "Bohemian" ? 'selected': '' %>value="Bohemian">Bohemian</option>
-			<option <%= design.style === "Mid-Century" ? 'selected': '' %>value="Mid-Century">Mid-Century</option>
-			<option <%= design.style === "Other" ? 'selected': '' %>value="Other">Other</option>
-		</select> <br><br>
-		<label>Imgur Image Link: </label><br>
-		<input type="text" name="images" value="<%= design.images %> " pattern="https:\/\/.{5,}"><br>
-		<button class="submitBtn" type="submit">Update Design</button> 
-
+		<fieldset>
+			<legend>Edit Design</legend>
+			<label class="title">Title:</label>
+			<input type="text" name="title" value="<%= design.title %> "> <br>
+			<label>Style:</label>
+			<select name="style" id="inputStyle">
+				<option <%= design.style === "Modern" ? 'selected': '' %> value="Modern">Modern</option>
+				<option <%= design.style === "Japandi" ? 'selected': '' %>value="Japandi">Japandi</option>
+				<option <%= design.style === "California" ? 'selected': '' %>value="California">California</option>
+				<option <%= design.style === "Minimal" ? 'selected': '' %>value="Minimal">Minimal</option>
+				<option <%= design.style === "Bohemian" ? 'selected': '' %>value="Bohemian">Bohemian</option>
+				<option <%= design.style === "Mid-Century" ? 'selected': '' %>value="Mid-Century">Mid-Century</option>
+				<option <%= design.style === "Other" ? 'selected': '' %>value="Other">Other</option>
+			</select> <br><br>
+			<label>Imgur Image Link: </label><br>
+			<input type="text" name="images" value="<%= design.images %> " pattern="https:\/\/.{5,}"><br>
+			<button class="editBtn" type="submit">Update Design</button>
+		</fieldset>
 	</form>
 </section>
 
