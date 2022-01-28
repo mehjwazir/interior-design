@@ -32,12 +32,74 @@ a {
 }
 
 /* IMAGES */
+/* home  */
 
-img {
+h5 {
+  text-align: center;
+  color: black;
+}
+
+
+.imagegrid {
+margin: 40 58px 40px 58px;
+}
+
+
+/* all designs */
+
+#alltitle {
+  text-align: center;
+  font-family: 'Kalam',
+  cursive;
+  font-size: 25px;
+}
+
+#mytitle {
+  text-align: center;
+  font-family: 'Kalam',
+  cursive;
+  font-size: 25px;
+}
+
+
+#mydes {
+  height: 600px;
+  width: 550px;
+  align-items: center;
+}
+.despage {
+  text-align: center;
+}
+
+.imageSection {
+ display: flex;
+ justify-content: center;
+}
+
+#formsec {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+#editbtn {
+   padding: .1em 1em;
+   margin-top: 5em;
+   border-radius: 6px;
+   background-color: #D0C8B6;
+   color: #fff;
+   font-family: 'Lato',
+   sans-serif;
+   font-size: .8em;
+   border-style: solid;
+}
+
+.allimages {
   height: 400px;
   width: 400px;
- 
-
+  float: left;
+  margin-top: 20px;
+  margin: 0 60px 20px 60px;
 }
 
 
@@ -147,7 +209,24 @@ fieldset {
   border-radius: 30px;
 }
 
+#addcom {
+     padding: .3em 1em;
+     margin-top: 1em;
+     border-radius: 6px;
+     background-color: #D0C8B6;
+     color: #fff;
+     font-family: 'Lato',
+     sans-serif;
+     font-size: .8em;
+     border-style: solid brown;
+}
+
 #btncom {
   margin: auto;
   border-radius: 10px;
+}
+
+#usercomment {
+  display: flex;
+  align-items: center;
 }

@@ -1,35 +1,41 @@
 <%- include('../partials/header') %>
-<br><br>
+<br>
+<div class="despage">
 <h1>Title: <%= design.title %></h1>
 <h1>Style: <%= design.style %></h1>
+</div>
 <br>
-<section class="imageSection">
+<section>
 	<div>
-		<div> <img class="allimages" alt="" src="<%= design.images %>">
+		<div class="imageSection"> 
+			<img id="mydes" alt="" src="<%= design.images %>">
 		</div>
+		<div id="formsec">
 		<div class="editDelBtnDiv">
 			<% if (user && user._id.equals(design.user)) { %>
 
-			<a href="/designs/<%= design._id %>/edit ">Edit</a>
+			<a id="editbtn" href="/designs/<%= design._id %>/edit ">Edit</a>
 
 			<form action="/designs/<%= design._id %>?_method=DELETE" method="POST">
 				<button id="deletebtn" type="submit">Delete</button>
 			</form>
 			<% } %>
-			<br><br>
+			<br>
 
 			<h2>Comments</h2>
 			<form action="/designs/<%= design._id %>/comments" method="POST">
 				<label>Comment:</label> <br>
 				<textarea name="content"></textarea> <br>
-				<button type="submit" value="Add Comment">Add Comment</button>
+				<button id="addcom" type="submit" value="Add Comment">Add Comment</button>
 			</form>
 			<br>
 		</div>
 	</div>
+	</div>
 </section>
 <% design.comments.forEach(function(d) { %>
-<tr>
+<div id="usercomment">
+	<tr>
 	<td class="comment-user"><img alt="avatar" id="avatar" src="<%= d.userAvatar %>"><%= d.userName %></td>
 
 	<td><%= d.content%></td>
@@ -41,7 +47,8 @@
 	</form>
 	<% } %>
 </tr>
+</div>
+
 <% }); %>
-</tbody>
-</table>
+
 <%- include('../partials/footer') %>
