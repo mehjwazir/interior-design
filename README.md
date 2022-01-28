@@ -38,11 +38,11 @@ Interior Design Inspiration allows a user to save their favorite interior design
 * Heroku Deployment
 
 # ***Trello Board***
-[](https://interior-designr.herokuapp.com/)
+[Click Here](https://trello.com/b/BxTpBzF4/project-2)
 
 # Getting Started #
 
-[](https://interior-designr.herokuapp.com/)
+[Click Here](https://interior-designr.herokuapp.com/)
 
 
 # Next Steps #
