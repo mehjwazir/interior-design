@@ -2,7 +2,7 @@
 
 <section id="addDesignForm">
 	<form action="/designs/<%= design._id %>?_method=PUT" method="POST">
-		<label>Title:</label>
+		<label class="title" >Title:</label>
 		<input type="text" name="title" value="<%= design.title %> "> <br>
 		<label>Style:</label>
 		<select name="style" id="inputStyle">

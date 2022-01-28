@@ -9,9 +9,9 @@
 
 <section class="imageSection">
 
-	<div id="IMGDiv">
+	<div>
 
-		<div class="imgCapDiv"> <img class="image" alt="" width="500" height="500" src="<%= design.images %>">
+		<div> <img class="allimages" alt=""  src="<%= design.images %>">
 		</div>
 		<div class="editDelBtnDiv">
 			<% if (user && user._id.equals(design.user)) { %>
@@ -45,7 +45,7 @@
 <% design.comments.forEach(function(d) { %>
 
 <tr>
-	<td class="comment-user"><img alt="avatar" id="imgav" src="<%= d.userAvatar %>"><%= d.userName %></td>
+	<td class="comment-user"><img alt="avatar" id="avatar" src="<%= d.userAvatar %>"><%= d.userName %></td>
 
 	<td><%= d.content%></td>
 	<td><%= d.createdAt.toLocaleDateString() %></td>

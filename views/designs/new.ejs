@@ -1,25 +1,29 @@
 <%- include('../partials/header') %>
 
-<section id="addDesignForm">
+<section>
 	<form action="/designs" method="POST">
-		<label>Title:</label> 
-		<input type="text" name="title"> <br>
-		<br>
-		<label>Style:</label>
-		<select name="style" id="inputStyle">
-			<option value="Modern">Modern</option>
-			<option value="Japandi">Japandi</option>
-			<option value="California">California</option>
-			<option value="Minimal">Minimal</option>
-			<option value="Bohemian">Bohemian</option>
-			<option value="Mid-Century">Mid-Century</option>
-			<option value="Other">Other</option>
-		</select><br>
-		<br>
-		<label>Imgur Image Link: </label><br>
-		<input type="text" name="images" pattern="https:\/\/.{5,}"><br>
-		<input class="submitBtn" type="submit" value="Add Design">
+		<fieldset>
+			<legend>Add Design</legend>
+			<label>Title:</label>
+			<input type="text" name="title"> <br>
+			<br>
+			<label>Style:</label>
+			<select name="style" id="inputStyle">
+				<option value="Modern">Modern</option>
+				<option value="Japandi">Japandi</option>
+				<option value="California">California</option>
+				<option value="Minimal">Minimal</option>
+				<option value="Bohemian">Bohemian</option>
+				<option value="Mid-Century">Mid-Century</option>
+				<option value="Other">Other</option>
+			</select><br>
+			<br>
+			<label>Imgur Image Link: </label>
+			<input type="text" name="images" pattern="https:\/\/.{5,}"><br>
+			<input class="submitBtn" type="submit" value="Add Design">
+		</fieldset>
 	</form>
 </section>
+
 
 <%- include('../partials/footer') %>

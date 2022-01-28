@@ -2,12 +2,12 @@
 
 <h1>All Designs</h1>
 
-<div class="designlist">
+<div class="imagesection">
 
 
 	<% designs.forEach(function(d) { %>
 	<a href="/designs/<%= d._id %>">
-		<img src="<%=d.images %>" alt="" height="400px" width="400px" class="alldesigns">
+		<img src="<%=d.images %>" alt=""  class="allimages">
 	</a>
 
 	<% }); %>
