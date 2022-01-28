@@ -76,3 +76,14 @@ a {
   margin: 0 58px 30px 58px;
 }
 
+#imgav {
+  height: 40px;
+  width: 40px;
+  border-radius: 30px;
+}
+
+#btncom {
+  display: flex;
+  align-self: flex-end;
+   border-radius: 10px;
+}

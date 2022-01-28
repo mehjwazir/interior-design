@@ -45,17 +45,19 @@
 <% design.comments.forEach(function(d) { %>
 
 <tr>
-	<td class="comment-user"><img alt="avatar" src="<%= d.userAvatar %>"><%= d.userName %></td>
-	<td><%= d.createdAt.toLocaleDateString() %></td>
-	<td><%= d.content%></td>
+	<td class="comment-user"><img alt="avatar" id="imgav" src="<%= d.userAvatar %>"><%= d.userName %></td>
 
-	<td>
-		<% if (user && user._id.equals(d.user)) { %>
-		<form action="/comments/<%= d._id %>?_method=DELETE" method="POST">
-			<button type="submit">X</button>
-		</form>
-		<% } %>
-	</td>
+	<td><%= d.content%></td>
+	<td><%= d.createdAt.toLocaleDateString() %></td>
+
+
+
+	<% if (user && user._id.equals(d.user)) { %>
+	<form action="/comments/<%= d._id %>?_method=DELETE" method="POST">
+		<button id="btncom" type="submit">x</button>
+	</form>
+	<% } %>
+
 </tr>
 <% }); %>
 </tbody>
