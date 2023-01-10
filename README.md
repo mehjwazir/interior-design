@@ -9,10 +9,12 @@ a full-CRUD web app to allow users to visualize outcomes of interior design idea
 
 
 
-# ***Screen Shot***
-![](https://i.imgur.com/ll4c2nM.png)
+# ***Home Page***
+![](https://i.imgur.com/Kb5lpg5.png)
 
 
+# ***Page***
+![](https://i.imgur.com/hpcaM7W.png)
 
 
 # ***Add Design***
