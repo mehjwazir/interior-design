@@ -1,20 +1,21 @@
 
 
 # ***Interior Design Inspiration***
-A Space To Save Your Ideas! 
+Save your design Ideas in one place! 
 
 ## ***About***
 
-a full-CRUD web app to allow users to visualize outcomes of interior design ideas. Interior Design Inspiration allows a user to save their favorite interior design ideas in one place. The user can create, update and delete their designs. The user can add a title, style, and link their image via Imgur. Users can also add comments to designs.
+A full-CRUD web application that allows a user to save their interior design ideas. The user can create, update and delete their designs. The user can add a title, style and link to an image. Users can also add comments to another users designs. 
 
 
 
 # ***Home Page***
 ![](https://i.imgur.com/Kb5lpg5.png)
-
-
-# ***Page***
 ![](https://i.imgur.com/hpcaM7W.png)
+
+
+# ***All designs section***
+![](https://i.imgur.com/e48Zmm2.png)
 
 
 # ***Add Design***
@@ -25,7 +26,7 @@ a full-CRUD web app to allow users to visualize outcomes of interior design idea
 
 # ***User Design With Title***
 
-![](https://i.imgur.com/GM6fa3f.png)
+![](https://i.imgur.com/FocV56P.png)
 
 # ***Technologies Used***
 
@@ -37,14 +38,14 @@ a full-CRUD web app to allow users to visualize outcomes of interior design idea
 * MongoDB
 * Mongoose
 * OAuth
-* Heroku Deployment
+* Railway Deployment
 
 # ***Trello Board***
 [Click Here](https://trello.com/b/BxTpBzF4/project-2)
 
 # Getting Started #
 
-[Click Here](https://interior-designr.herokuapp.com/)
+[Click Here](https://interior-design.up.railway.app/)
 
 
 # Next Steps #
