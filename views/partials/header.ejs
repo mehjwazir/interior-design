@@ -7,34 +7,38 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<link rel='stylesheet' href='/stylesheets/style.css' />
 	<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
-	<title><%= title %></title>
+	<title>
+		<%= title %>
+	</title>
 </head>
 
 <body>
+	<div class="banner">
+		<p class="home-banner">Enjoy exploring a great selection of images</p>
+	</div>
 	<nav>
+		<a href="/" class="navbar-brand">Interior Design Inspiration</a>
+		<ul>
 
-		<img class="icon" src="https://i.imgur.com/aNfq7H3t.jpg">
+			<li><a href="/" class="nav-links" <%- title==='HOME' ? 'class="active"' : '' %>>HOME</a></li>
 
-		<button><a href="/" <%- title === 'HOME' ? 'class="active"' : '' %>>
-				HOME</a></button>
-
-		<button><a href="/designs" <%- title === 'All Designs' ? 'class="active"' : '' %>>ALL DESIGNS</a>
+			<li><a href="/designs" class="nav-links" <%- title==='All Designs' ? 'class="active"' : '' %>>ALL DESIGNS</a></li>
 
 			<% if (user) { %> </button>
 
-		<button><a href="/designs/new" <%- title === 'Add Design' ? 'class="active"' : '' %>>ADD DESIGN</a> </button>
+				<li><a href="/designs/new" class="nav-links"<%- title==='Add Design' ? 'class="active"' : '' %>>ADD DESIGN</a> </li>
 
-		<button><a href="/designs/mydesigns" <%- title === 'My Designs' ? 'class="active"' : '' %>>MY DESIGNS</a>
-		</button>
+				<li><a href="/designs/mydesigns" class="nav-links" <%- title==='My Designs' ? 'class="active"' : '' %>>MY DESIGNS</a></li>
 
-		<button class='loginoutBtn'><a href="/logout">LOG OUT</a> </button>
-		<% } else { %>
-		<button class='loginoutBtn'> <a href="/auth/google" <%- title === 'Log in' ? 'class="active"' : '' %>>LOG IN</a>
-		</button>
+				<li  class='loginoutBtn'><a href="/logout" class="nav-links">LOG OUT</a></li>
+				<% } else { %>
+					<li class='loginoutBtn'> <a href="/auth/google" class="nav-links"<%- title==='Log in' ? 'class="active"' : '' %>>LOG IN</a></li>
+					
+		</ul>
+		
+		
 
 		<% } %>
 
-		<h1 class="header">Interior Design Inspiration</h1>
-		
 	</nav>
 	<main>

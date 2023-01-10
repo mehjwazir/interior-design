@@ -1,31 +1,61 @@
 @import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300&display=swap');
 
+* {
+ margin: 0;
+  /* padding: 0;
+  box-sizing: inherit; */
+}
 
 body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   background-color: white;
 }
 
-/* NAV BAR HEADER */
-nav {
-  grid-area: nav;
-  background-color: #E8DED1;
-  display: flex;
-  align-items: center;
-  padding: 0 20px 0 30px;
+div {
+  display: block;
 }
 
-.icon {
-  height: 100px;
-  width: 100px;
+/* NAV BAR HEADER */
+nav {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+  background-color: #d6d0c8;
+  padding: 1rem;
+}
+
+
+.nav-links:hover {
+  color: white;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: 'Kalam', cursive;
+
+}
+
+ul {
+  list-style: none;
+  display: flex;
+    justify-content: left;
+    
+}
+
+li {
+  margin-left: 1rem;
 }
 
 a {
-  color: black;
+  text-decoration: none;
+  color: rgb(100, 97, 97);
 }
 
+
+
+
 .header {
-  margin-left: 280px;
   font-family: 'Kalam', cursive;
   font-size: 25px;
   text-align: center;
@@ -39,10 +69,15 @@ h5 {
   color: black;
 }
 
-
-.imagegrid {
-margin: 40 58px 40px 58px;
+.size {
+  height: 50vw;
+  width: 100vw;
 }
+
+/* 
+.imagegrid {
+  margin: 40 58px 40px 58px;
+} */
 
 
 /* all designs */
@@ -50,14 +85,14 @@ margin: 40 58px 40px 58px;
 #alltitle {
   text-align: center;
   font-family: 'Kalam',
-  cursive;
+    cursive;
   font-size: 25px;
 }
 
 #mytitle {
   text-align: center;
   font-family: 'Kalam',
-  cursive;
+    cursive;
   font-size: 25px;
 }
 
@@ -67,13 +102,14 @@ margin: 40 58px 40px 58px;
   width: 550px;
   align-items: center;
 }
+
 .despage {
   text-align: center;
 }
 
 .imageSection {
- display: flex;
- justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 #formsec {
@@ -83,25 +119,31 @@ margin: 40 58px 40px 58px;
 }
 
 #editbtn {
-   padding: .1em 1em;
-   margin-top: 5em;
-   border-radius: 6px;
-   background-color: #D0C8B6;
-   color: #fff;
-   font-family: 'Lato',
-   sans-serif;
-   font-size: .8em;
-   border-style: solid;
+  padding: .1em 1em;
+  margin-top: 5em;
+  border-radius: 6px;
+  background-color: #D0C8B6;
+  color: #fff;
+  font-family: 'Lato',
+    sans-serif;
+  font-size: .8em;
+  border-style: solid;
+}
+
+.grid {
+  display: flex;
+  /* flex-direction: row; */
+  flex-wrap: wrap;
+  justify-content: center;
+
+
 }
 
 .allimages {
-  height: 400px;
   width: 400px;
-  float: left;
-  margin-top: 20px;
-  margin: 0 60px 20px 60px;
+  height: 400px;
+  margin: 10px;
 }
-
 
 /* Fieldset and legend */
 fieldset {
@@ -185,40 +227,51 @@ fieldset {
   font-family: 'Lato', sans-serif;
   font-size: .8em;
   border-style: none;
+  display: inline-block;
+  /* justify-content: center; */
+  text-align: center;
+
 }
 
 /* SHOW */
 #deletebtn {
-    padding: .3em 1em;
-    margin-top: 1em;
-    border-radius: 6px;
-    background-color: #D0C8B6;
-    color: #fff;
-    font-family: 'Lato', sans-serif;
-    font-size: .8em;
-    border-style: solid brown;
-    
+  padding: .3em 1em;
+  margin-top: 1em;
+  border-radius: 6px;
+  background-color: #D0C8B6;
+  color: #fff;
+  font-family: 'Lato', sans-serif;
+  font-size: .8em;
+  border-style: solid brown;
+  display: inline-block;
+  /* justify-content: center; */
+  text-align: center;
+
+
+
 }
 
 
 /* COMMENTS */
 
 #avatar {
-  height: 40px;
-  width: 40px;
-  border-radius: 30px;
+  height: 20px;
+  width: 20px;
+  margin-right: 1rem;
+  margin-bottom: 2rem;
+  /* border-radius: 30px; */
 }
 
 #addcom {
-     padding: .3em 1em;
-     margin-top: 1em;
-     border-radius: 6px;
-     background-color: #D0C8B6;
-     color: #fff;
-     font-family: 'Lato',
-     sans-serif;
-     font-size: .8em;
-     border-style: solid brown;
+  padding: .3em 1em;
+  margin-top: 1em;
+  border-radius: 6px;
+  background-color: #D0C8B6;
+  color: #fff;
+  font-family: 'Lato',
+    sans-serif;
+  font-size: .8em;
+  border-style: solid brown;
 }
 
 #btncom {
@@ -228,5 +281,64 @@ fieldset {
 
 #usercomment {
   display: flex;
-  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+
+
+
+
+.builder {
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100vw;
+
+}
+
+.items-img {
+  width: 100vw;
+}
+
+.div-img {
+  position: relative;
+
+}
+
+.discover-img {
+  width: 100vw;
+
+}
+
+.home-btn {
+
+  position: absolute;
+  top: 43%;
+  left: 74%;
+  z-index: 1;
+  transform: translate(-50%, -50%);
+
+
+}
+
+.comment-h2 {
+  margin-bottom: 1rem;
+}
+
+.banner {
+  position: relative;
+  z-index: 500;
+  background-color: #f8f6f3;
+  height: 2rem;
+}
+
+
+.home-banner {
+  font-family: Suisse Regular, sans-serif;
+  color: gray;
+  text-align: center;
+  line-height: 2.5;
+  font-size: 1.6vmin;
+
 }
