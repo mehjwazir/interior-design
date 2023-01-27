@@ -14,7 +14,7 @@
 		<div class="editDelBtnDiv">
 			<% if (user && user._id.equals(design.user)) { %>
 
-			<a id="editbtn" href="/designs/<%= design._id %>/edit ">Edit</a>
+			<a id="edit-btn" href="/designs/<%= design._id %>/edit ">Edit</a>
 
 			<form action="/designs/<%= design._id %>?_method=DELETE" method="POST">
 				<button id="deletebtn" type="submit">Delete</button>
