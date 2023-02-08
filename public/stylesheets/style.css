@@ -4,12 +4,16 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+ 
 }
+
 
 body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   background-color: white;
+
 }
+
 
 .banner {
   position: relative;
@@ -153,6 +157,11 @@ a {
 
   .banner {
     display: none;
+  }
+
+  .footer {
+    margin-bottom: 0;
+    padding-bottom: 0;
   }
 }
 
@@ -308,6 +317,15 @@ input[type="submit"] {
       margin: 50px auto;
      
   }
+
+    footer {
+      height: 5rem;
+      background-color: #d6d0c8;
+      margin-bottom: 0;
+  
+    }
+
+ 
 }
 
 fieldset {
@@ -316,6 +334,7 @@ fieldset {
   margin: 50px auto;
   text-align: center;
 }
+
 
 
 
@@ -431,3 +450,18 @@ fieldset {
   margin-bottom: 1rem;
 }
 
+footer {
+  height: 5rem;
+  background-color:#d6d0c8;
+  padding-bottom: 0;
+  
+
+ 
+}
+
+.footer-text {
+  font-family: Suisse Regular, sans-serif;
+padding-top: 1rem;
+  color:gray;
+  text-align: center;
+}
