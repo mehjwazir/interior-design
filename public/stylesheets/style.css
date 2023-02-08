@@ -49,6 +49,10 @@ body {
   padding: 12px 20px;
 }
 
+.nav-links {
+ padding: 1rem;
+}
+
 a {
   text-decoration: none;
   color: rgb(100, 97, 97);
