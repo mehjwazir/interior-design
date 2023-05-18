@@ -83,10 +83,22 @@ body {
   left: 74%;
   z-index: 1;
   transform: translate(-50%, -50%);
-
-
+  background: none;
+  border: none;
+  text-decoration: underline;
+  padding-bottom: 5px;
 }
 
+.home-btn:hover {
+  background-color: black;
+  font-style: italic;
+  text-decoration: none;
+}
+
+
+.h-btn:hover {
+  color: white;
+}
 .comment-h2 {
   margin-bottom: 1rem;
 }
