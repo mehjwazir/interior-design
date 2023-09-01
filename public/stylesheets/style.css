@@ -60,6 +60,11 @@ body {
 
 }
 
+.arje-img {
+  width: 50%;
+  height: 50%;
+}
+
 .items-img {
   width: 100vw;
 }
