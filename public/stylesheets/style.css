@@ -60,11 +60,27 @@ body {
 
 }
 
-.arje-img {
+.text-div {
+  text-align: center;
+}
+
+.arje2-img { 
+  margin-top: 10rem;
   width: 50%;
   height: 50%;
 }
+.arje-img {
+  margin-top: 10rem;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 10rem;
+}
 
+.home-text-p {
+  text-align: center;
+  margin: 1rem;
+  padding: 5rem;
+}
 .items-img {
   width: 100vw;
 }
