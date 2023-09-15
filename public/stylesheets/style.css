@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cardo:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
 
 * {
   box-sizing: border-box;
@@ -30,11 +32,12 @@ body {
 
 .main-container {
   min-height: 100vh;
-    overflow: hidden;
-    display: block;
-    position: relative;
-    padding-bottom: 100px;
-    background-color: #f4f0f0;;
+  overflow: hidden;
+  display: block;
+  position: relative;
+  padding-bottom: 100px;
+  background-color: #f4f0f0;
+  ;
 }
 
 .banner-div {
@@ -62,25 +65,76 @@ body {
 
 .text-div {
   text-align: center;
+  margin-top: 5rem;
 }
 
-.arje2-img { 
-  margin-top: 10rem;
-  width: 50%;
-  height: 50%;
+.home-text-p {
+  font-family: 'Noto Sans',
+  sans-serif;
+  font-size: 18px;
+    color: #67645e;
+  line-height: 2em;
 }
-.arje-img {
-  margin-top: 10rem;
+
+.container {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+
+.arje1-img {
+  flex: 1;
   width: 50%;
+  height: auto;
+}
+
+.paragraph {
+  font-family: 'Noto Sans',
+  sans-serif;
+  font-size: 18px;
+  color: #67645e;
+  line-height: 2em;
+  flex: 2;
+  padding: 20px;
+  text-align: justify;
+  padding: 5rem;
+
+}
+
+@media (max-width: 768px) {
+  .container {
+    text-align: center;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2px;
+  }
+}
+
+.arje2-div {
+  display: flex;
+  justify-content: center;
+}
+
+.arje2-img {
+  margin-top: 10rem;
+  width: 90%;
   height: 50%;
   margin-bottom: 10rem;
+  justify-content: center;
 }
+
+
 
 .home-text-p {
   text-align: center;
   margin: 1rem;
   padding: 5rem;
 }
+
 .items-img {
   width: 100vw;
 }
@@ -95,13 +149,18 @@ body {
 .discover-img {
   width: 100vw;
   margin-bottom: 0;
+  display: flex;
+  justify-content: center;
+  margin-left: 5rem;
+  margin-right: 5rem;
+
 
 }
 
 .home-btn {
   position: absolute;
   top: 43%;
-  left: 74%;
+  left: 76%;
   z-index: 1;
   transform: translate(-50%, -50%);
   background: none;
@@ -120,6 +179,7 @@ body {
 .h-btn:hover {
   color: white;
 }
+
 .comment-h2 {
   margin-bottom: 1rem;
 }
@@ -145,7 +205,7 @@ body {
 }
 
 .nav-links {
- padding: 1rem;
+  padding: 1rem;
 }
 
 a {
@@ -207,7 +267,7 @@ a {
 
 /* NAV SLIDER MEDIA */
 
-@media only screen and (max-width:768px){
+@media only screen and (max-width:768px) {
   .menu {
     flex-direction: column;
     align-items: center;
@@ -277,12 +337,13 @@ a {
   font-size: 25px;
 }
 
-h1{
+h1 {
   color: #67645e;
   margin-top: 1rem;
   font-family: 'Kalam',
     cursive;
 }
+
 #mydes {
   height: 600px;
   width: 550px;
@@ -360,7 +421,7 @@ legend {
 label {
   display: block;
   margin-top: 1em;
-  
+
 }
 
 label:first-of-type {
@@ -403,9 +464,10 @@ input[type="submit"] {
     font-size: 1.75em;
     width: 50%;
     min-width: 200px;
-    margin: 50px auto;  
+    margin: 50px auto;
   }
-    /* footer {
+
+  /* footer {
       height: 5rem;
       background-color: #d6d0c8;
       margin-bottom: 0;  
@@ -472,8 +534,9 @@ input[type="submit"] {
 .add-label {
   color: #67645e;
   font-family: 'Kalam',
-      cursive;
+    cursive;
 }
+
 #avatar {
   height: 20px;
   width: 20px;
@@ -520,17 +583,17 @@ input[type="submit"] {
 
 .marquee {
   -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    position: relative;
-    overflow: hidden;
-    width: 300%;
-    --offset: 20vw;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: relative;
+  overflow: hidden;
+  width: 300%;
+  --offset: 20vw;
   --item-font-size: 10vw;
-    --move-initial: 0;
-    --move-final: -100%;
+  --move-initial: 0;
+  --move-final: -100%;
 }
 
 .marquee__inner {
@@ -553,11 +616,11 @@ input[type="submit"] {
 
 @keyframes marquee {
   0% {
-  transform: translate(0, 0);
+    transform: translate(0, 0);
   }
 
   100% {
-  transform: translate(-100%, 0);
+    transform: translate(-100%, 0);
   }
 }
 
@@ -569,16 +632,16 @@ input[type="submit"] {
 #footer {
   margin-top: 0;
   height: 5rem;
-  background-color:#d6d0c8;
+  background-color: #d6d0c8;
   position: absolute;
-    bottom: 0;
-    width: 100%;
+  bottom: 0;
+  width: 100%;
 }
 
 .footer-text {
   font-family: Suisse Regular, sans-serif;
   padding-top: 2rem;
-  color:gray;
+  color: gray;
   text-align: center;
 }
 
